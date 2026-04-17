@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agro Forte, Futuro Sustentável - Equilíbrio entre Produção e Meio Ambiente">
+    <meta name="keywords" content="agricultura sustentável, agronegócio, meio ambiente, tecnologia agrícola">
+    <title>Agro Forte - Futuro Sustentável</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d7a3e;
+            --light-green: #4a9d5f;
+            --accent-gold: #d4a574;
+            --dark-text: #1a1a1a;
+            --light-bg: #f5f5f5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+        }
+
+        /* Header e Navegação */
+        header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(45, 122, 62, 0.7), rgba(45, 122, 62, 0.7)), 
+                        url('hero_agro.png') center/cover no-repeat;
+            color: var(--white);
+            padding: 8rem 2rem;
+            text-align: center;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            background-color: var(--accent-gold);
+            color: var(--primary-green);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #e0b88a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Seções */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            color: #333;
+        }
+
+        /* Seção de Trajetória */
+        .trajectory-section {
+            background-color: var(--white);
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline-item {
+            background: linear-gradient(135deg, #f0f8f4, #e8f3ed);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-green);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(45, 122, 62, 0.1);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        /* Seção de Pilares */
+        .pillars-section {
+            background-color: var(--light-bg);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pillar-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(45, 122, 62, 0.15);
+        }
+
+        .pillar-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .pillar-card p {
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Seção de Inovações */
+        .innovations-section {
+            background-color: var(--white);
+        }
+
+        .innovations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .innovation-item {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .innovation-item:hover {
+            transform: scale(1.05);
+        }
+
+        .innovation-item h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .innovation-item p {
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        /* Seção de Imagens */
+        .images-section {
+            background-color: var(--light-bg);
+            padding: 4rem 0;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .image-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            background-color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+            color: var(--primary-green);
+        }
+
+        /* Seção de Futuro */
+        .future-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            text-align: center;
+        }
+
+        .future-section h2 {
+            color: var(--white);
+        }
+
+        .future-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        /* Tabela de Dados */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .data-table thead {
+            background-color: var(--primary-green);
+            color: var(--white);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            .timeline,
+            .pillars-grid,
+            .innovations-grid,
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <span>Agro Forte</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#trajetoria">Trajetória</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#inovacoes">Inovações</a></li>
+                    <li><a href="#futuro">Futuro</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Agro Forte, Futuro Sustentável</h1>
+        <p>Equilíbrio entre Produção e Meio Ambiente</p>
+        <a href="#trajetoria" class="cta-button">Saiba Mais</a>
+    </section>
+
+    <!-- Trajetória -->
+    <section id="trajetoria" class="trajectory-section">
+        <div class="container">
+            <h2>A Trajetória do Agronegócio Brasileiro</h2>
+            <p>O agronegócio brasileiro passou por uma transformação notável nas últimas décadas, evoluindo de práticas tradicionais para um modelo altamente tecnificado e eficiente. A tecnologia foi a força motriz dessa transformação, permitindo aumentar a produtividade da terra enquanto preserva os recursos naturais.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Década de 1960</h3>
+                    <p>Início da modernização agrícola com a mecanização das operações e introdução de técnicas mais produtivas.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>1965-2000</h3>
+                    <p>Construção de um agro próspero com foco em aumento de produtividade e expansão de cultivos.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Século XXI</h3>
+                    <p>Tecnificação intensa com agricultura digital, drones, sensores e sistemas de precisão (Agro 4.0).</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Futuro Sustentável</h3>
+                    <p>Integração de sustentabilidade ambiental com produção eficiente e responsabilidade social.</p>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary-green); margin-top: 3rem; margin-bottom: 1rem;">Efeito Poupa-Terra</h3>
+            <p>O aumento da produtividade permite produzir mais alimento na mesma área de terra, reduzindo a necessidade de expansão agrícola e preservando florestas e ecossistemas naturais. Entre 1960 e 2017, houve um crescimento significativo de tratores por hectare, de 0,06 para 17,1, indicando forte modernização agropecuária.</p>
+        </div>
+    </section>
+
+    <!-- Pilares da Sustentabilidade -->
+    <section id="pilares" class="pillars-section">
+        <div class="container">
+            <h2>Pilares da Sustentabilidade no Agro</h2>
+            <p>O futuro do agronegócio é construído sobre quatro pilares fundamentais que garantem equilíbrio entre produção e preservação ambiental.</p>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔬</div>
+                    <h3>Tecnologia</h3>
+                    <p>Uso de agricultura digital, drones, sensores e inteligência artificial para otimizar insumos, aumentar produtividade e reduzir desperdícios.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌿</div>
+                    <h3>Preservação</h3>
+                    <p>Recuperação de pastagens degradadas, sistemas de Integração Lavoura-Pecuária-Floresta (ILPF) e proteção de ecossistemas naturais.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚡</div>
+                    <h3>Energias Limpas</h3>
+                    <p>Uso de biomassa, energia solar e outras fontes renováveis nas propriedades rurais para reduzir emissões de carbono.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">👥</div>
+                    <h3>Responsabilidade Social</h3>
+                    <p>Fortalecimento da agricultura familiar, segurança alimentar, geração de emprego e melhoria da qualidade de vida no campo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inovações Tecnológicas -->
+    <section id="inovacoes" class="innovations-section">
+        <div class="container">
+            <h2>Inovações Tecnológicas</h2>
+            <p>As tecnologias emergentes estão revolucionando a forma como produzimos alimentos, tornando o agronegócio mais eficiente, sustentável e resiliente.</p>
+            
+            <div class="innovations-grid">
+                <div class="innovation-item">
+                    <h3>Agricultura de Precisão</h3>
+                    <p>Aplicação de fertilizantes, defensivos e água apenas onde é necessário, utilizando mapas de variabilidade espacial e dados de sensores para otimizar recursos e reduzir impactos ambientais.</p>
+                </div>
+                <div class="innovation-item">
+                    <h3>Bioinsumos</h3>
+                    <p>Uso de microrganismos benéficos para fertilização biológica e controle natural de pragas, reduzindo a dependência de produtos químicos sintéticos.</p>
+                </div>
+                <div class="innovation-item">
+                    <h3>Rastreabilidade</h3>
+                    <p>Sistemas de blockchain e IoT que garantem a origem dos produtos e certificam que viêm de áreas sem desmatamento ilegal.</p>
+                </div>
+                <div class="innovation-item">
+                    <h3>Drones e Sensores</h3>
+                    <p>Monitoramento aéreo de lavouras para detecção precoce de doenças, pragas e estresse hídrico, permitindo intervenções rápidas e eficazes.</p>
+                </div>
+                <div class="innovation-item">
+                    <h3>Inteligência Artificial</h3>
+                    <p>Análise de big data para prognóstico de safras, otimização de rotações de culturas e previsão de demanda de mercado.</p>
+                </div>
+                <div class="innovation-item">
+                    <h3>Sistemas Integrados</h3>
+                    <p>Integração Lavoura-Pecuária-Floresta (ILPF) que combina produção agrícola, pecuária e florestal de forma sinérgica e sustentável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Imagens -->
+    <section id="imagens" class="images-section">
+        <div class="container">
+            <h2>Agro Sustentável em Ação</h2>
+            <p>Conheça as práticas e tecnologias que estão transformando o agronegócio brasileiro em um modelo de sustentabilidade.</p>
+            
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="hero_agro.png" alt="Drone monitorando plantação ao pôr do sol">
+                    <div class="image-caption">Tecnologia e Inovação</div>
+                </div>
+                <div class="image-card">
+                    <img src="tech_agro.png" alt="Tablet com dados de agricultura de precisão">
+                    <div class="image-caption">Agricultura de Precisão</div>
+                </div>
+                <div class="image-card">
+                    <img src="nature_agro.png" alt="Sistema integrado de lavoura, pecuária e floresta">
+                    <div class="image-caption">Integração Lavoura-Pecuária-Floresta</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dados e Estatísticas -->
+    <section class="trajectory-section">
+        <div class="container">
+            <h2>Dados e Estatísticas</h2>
+            <p>Indicadores que demonstram o crescimento e a modernização do agronegócio brasileiro.</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>1995/96</th>
+                        <th>2006</th>
+                        <th>2017</th>
+                        <th>Crescimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Produtividade Total dos Fatores (PTF)</td>
+                        <td>100</td>
+                        <td>130</td>
+                        <td>180</td>
+                        <td>+80%</td>
+                    </tr>
+                    <tr>
+                        <td>Tratores por 1000 hectares</td>
+                        <td>0.06</td>
+                        <td>5.5</td>
+                        <td>17.1</td>
+                        <td>+28,400%</td>
+                    </tr>
+                    <tr>
+                        <td>Potência média por hectare (cv)</td>
+                        <td>0.38</td>
+                        <td>1.05</td>
+                        <td>1.71</td>
+                        <td>+350%</td>
+                    </tr>
+                    <tr>
+                        <td>Crescimento de Tratores (2006-2017)</td>
+                        <td>-</td>
+                        <td>Base</td>
+                        <td>+50%</td>
+                        <td>Modernização Acelerada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Futuro Sustentável -->
+    <section id="futuro" class="future-section">
+        <div class="container">
+            <h2>O Futuro Sustentável</h2>
+            <p>O agronegócio do futuro será regenerativo, circular e resiliente às mudanças climáticas. Integra produção eficiente de alimentos com preservação ambiental, garantindo segurança alimentar para uma população mundial crescente sem comprometer os recursos naturais.</p>
+            <p>Com a combinação de tecnologias avançadas, práticas sustentáveis e compromisso com a responsabilidade ambiental, o Brasil está posicionado para liderar a transformação global do agronegócio.</p>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="trajectory-section">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Quer saber mais sobre agricultura sustentável e inovações no agronegócio? Conecte-se conosco!</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <p style="margin-bottom: 1rem;"><strong>Email:</strong> contato@agroforte.com.br</p>
+                <p style="margin-bottom: 1rem;"><strong>Telefone:</strong> (11) 3000-0000</p>
+                <p style="margin-bottom: 1rem;"><strong>Redes Sociais:</strong></p>
+                <div class="footer-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Agro Forte - Futuro Sustentável. Todos os direitos reservados.</p>
+        <p>Promovendo o equilíbrio entre produção agrícola e preservação do meio ambiente.</p>
+        <div class="footer-links">
+            <a href="#trajetoria">Trajetória</a>
+            <a href="#pilares">Pilares</a>
+            <a href="#inovacoes">Inovações</a>
+            <a href="#futuro">Futuro</a>
+        </div>
+    </footer>
+</body>
+</html>

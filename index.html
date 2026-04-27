@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
-    <meta name="description" content="Transformando a agricultura com tecnologia e sustentabilidade. Conheça as práticas modernas que garantem um futuro melhor para o agronegócio.">
+    <title>Agro Forte | Excelência em Agronegócio Sustentável</title>
+    <meta name="description" content="Líder em soluções tecnológicas para o agronegócio. Transformamos produtividade em sustentabilidade com tecnologia de ponta.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
+        :root {
+            --primary-color: #1B4D3E;
+            --secondary-color: #C85A17;
+            --accent-color: #B8E034;
+            --text-dark: #1A1A1A;
+            --text-light: #F4F4F4;
+            --bg-light: #FAFAF8;
+            --white: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,1408 +33,492 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: #1A1A1A;
-            background-color: #FAFAF8;
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.7;
+            scroll-behavior: smooth;
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-        }
-
-        h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
+            color: var(--primary-color);
         }
 
         .container {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-        }
-
-        /* Navigation */
-        nav {
-            background-color: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            position: sticky;
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
             top: 0;
-            z-index: 50;
+            z-index: 1000;
         }
 
-        nav .container {
+        nav {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 1rem 2rem;
+            align-items: center;
+            padding: 15px 0;
         }
 
-        .nav-brand {
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #1B4D3E;
+            gap: 10px;
+            text-decoration: none;
         }
 
         .nav-links {
-            display: none;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .nav-links {
-                display: flex;
-            }
+            display: flex;
+            gap: 30px;
+            list-style: none;
         }
 
         .nav-links a {
-            color: #1A1A1A;
             text-decoration: none;
-            transition: color 0.3s;
-            cursor: pointer;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: #1B4D3E;
+            color: var(--secondary-color);
+        }
+
+        .btn-nav {
+            background: var(--primary-color);
+            color: var(--white) !important;
+            padding: 8px 20px;
+            border-radius: 5px;
         }
 
         /* Hero Section */
         .hero {
-            position: relative;
-            overflow: hidden;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/hero-agro-RzDgNwXznmrcSafgwCLqHB.webp');
+            padding: 180px 0 100px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
-            padding: 8rem 2rem;
-        }
-
-        .hero-content {
-            max-width: 600px;
+            color: var(--white);
+            text-align: center;
         }
 
         .hero h1 {
             font-size: 3.5rem;
-            color: white;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero h1 .highlight {
-            color: #B8E034;
+            color: var(--white);
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: #E8E4E0;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.75rem 2rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .btn-primary {
-            background-color: #1B4D3E;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #0F3A4D;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: #C85A17;
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background-color: #B84A0A;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-        }
-
-        section h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #1B4D3E;
-        }
-
-        section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1B4D3E;
-        }
-
-        /* About Section */
-        .about {
-            background-color: #FAFAF8;
-        }
-
-        .about .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .about .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .about p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            color: #1A1A1A;
-        }
-
-        .about img {
-            border-radius: 0.5rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
-
-        .feature-list {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .feature-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            margin-top: 0.25rem;
-        }
-
-        /* Divider */
-        .section-divider {
-            height: 80px;
-            background: linear-gradient(to bottom, transparent, #E8E4E0);
-            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-        }
-
-        /* Innovation Section */
-        .innovation {
-            background-color: #FAFAF8;
-        }
-
-        .innovation .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .innovation .text-center h2 {
-            margin-bottom: 1rem;
-        }
-
-        .innovation .text-center p {
-            font-size: 1.25rem;
-            color: #757575;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-
-        .card:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .card-icon {
-            width: 64px;
-            height: 64px;
-            background-color: #1B4D3E;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 2rem;
-        }
-
-        .card h3 {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            text-align: center;
-            color: #1A1A1A;
-            line-height: 1.8;
-        }
-
-        /* Sustainability Section */
-        .sustainability {
-            background: linear-gradient(135deg, #1B4D3E 0%, #0F3A4D 100%);
-            color: white;
-        }
-
-        .sustainability .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .sustainability .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .sustainability h2 {
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .sustainability p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .sustainability-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .sustainability-item {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .sustainability-item-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            margin-top: 0.25rem;
-        }
-
-        .sustainability img {
-            border-radius: 0.5rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            width: 100%;
-        }
-
-        /* Future Section */
-        .future {
-            background-color: #FAFAF8;
-        }
-
-        .future .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .future .text-center h2 {
-            margin-bottom: 1rem;
-        }
-
-        .future .text-center p {
-            font-size: 1.25rem;
-            color: #757575;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .future-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .future-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid #1B4D3E;
-            transition: all 0.3s;
-        }
-
-        .future-card:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .future-card h3 {
-            margin-bottom: 1rem;
-        }
-
-        .future-card p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .future-card ul {
-            list-style: none;
-        }
-
-        .future-card li {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-            color: #757575;
-        }
-
-        .future-card li::before {
-            content: '•';
-            color: #C85A17;
-            font-weight: bold;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background-color: #FAFAF8;
-        }
-
-        .testimonials .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background-color: white;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-
-        .testimonial-card:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .stars {
-            color: #C85A17;
             font-size: 1.2rem;
-            margin-bottom: 1rem;
-            letter-spacing: 0.2rem;
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-style: italic;
-            color: #1A1A1A;
-        }
-
-        .testimonial-author h4 {
-            color: #1B4D3E;
-            margin-bottom: 0.25rem;
-        }
-
-        .testimonial-author p {
-            font-size: 0.9rem;
-            color: #757575;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            background-color: #FAFAF8;
-        }
-
-        .gallery .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            height: 250px;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-item-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            color: white;
-            padding: 2rem 1rem 1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-
-        .gallery-item:hover .gallery-item-caption {
-            transform: translateY(0);
-        }
-
-        /* Benefits Section */
-        .benefits {
-            background: linear-gradient(135deg, #1B4D3E 0%, #0F3A4D 100%);
-            color: white;
-        }
-
-        .benefits .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .benefits .text-center h2 {
-            color: white;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .benefit-item {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .benefit-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .benefit-item h3 {
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .benefit-item p {
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
-        }
-
-        /* Reviews Section */
-        .reviews {
-            background: linear-gradient(135deg, #1B4D3E 0%, #0F3A4D 100%);
-            color: white;
-        }
-
-        .reviews .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .reviews .text-center h2 {
-            color: white;
-        }
-
-        .reviews .text-center p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .rating-form {
-            background-color: white;
-            color: #1A1A1A;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            margin-top: 3rem;
+            margin-bottom: 35px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .rating-form h3 {
-            margin-bottom: 1.5rem;
-            color: #1B4D3E;
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #a64a13;
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* About & Image */
+        .about-flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0 var(--accent-color);
+        }
+
+        /* Stats */
+        .stats {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        /* Form Section */
+        .contact-section {
+            background: #eef2f1;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #1A1A1A;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #E8E4E0;
-            border-radius: 0.5rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #1B4D3E;
-            box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .star-rating {
-            display: flex;
-            gap: 0.5rem;
-            font-size: 2rem;
-        }
-
-        .star-rating input {
-            display: none;
-        }
-
-        .star-rating label {
-            cursor: pointer;
-            color: #E8E4E0;
-            transition: color 0.2s;
-            margin: 0;
-        }
-
-        .star-rating label:hover,
-        .star-rating label:hover ~ label,
-        .star-rating input:checked ~ label {
-            color: #C85A17;
-        }
-
-        .star-rating {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-        }
-
-        .submit-btn {
-            background-color: #1B4D3E;
-            color: white;
-            padding: 0.75rem 2rem;
-            border: none;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .submit-btn:hover {
-            background-color: #0F3A4D;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .success-message {
-            display: none;
-            background-color: #D4EDDA;
-            color: #155724;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid #28A745;
-        }
-
-        .success-message.show {
-            display: block;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* FAQ Section */
-        .faq {
-            background-color: #FAFAF8;
-        }
-
-        .faq .text-center {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background-color: white;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #FAFAF8;
-            transition: background-color 0.3s;
+            margin-bottom: 8px;
             font-weight: 600;
-            color: #1B4D3E;
         }
 
-        .faq-question:hover {
-            background-color: #F0F0ED;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .faq-toggle.open {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 1.5rem;
-        }
-
-        .faq-answer.open {
-            max-height: 500px;
-            padding: 0 1.5rem 1.5rem 1.5rem;
-        }
-
-        .faq-answer p {
-            color: #757575;
-            line-height: 1.8;
-        }
-
-        /* Stats Section */
-        .stats {
-            background-color: #FAFAF8;
-        }
-
-        .stats .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #1B4D3E;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #757575;
-            font-size: 1rem;
-        }
-
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(135deg, #1B4D3E 0%, #0F3A4D 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta .btn-group {
-            justify-content: center;
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
         }
 
         /* Footer */
         footer {
-            background-color: #1A1A1A;
-            color: white;
-            padding: 3rem 0;
+            background: #111;
+            color: var(--white);
+            padding: 60px 0 20px;
         }
 
-        footer .container {
+        .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
-        footer h4 {
-            color: white;
-            margin-bottom: 1rem;
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
         }
 
-        footer p {
-            color: #A0A0A0;
-            line-height: 1.8;
-        }
-
-        footer ul {
+        .footer-col ul {
             list-style: none;
         }
 
-        footer li {
-            margin-bottom: 0.5rem;
+        .footer-col ul li {
+            margin-bottom: 10px;
         }
 
-        footer a {
-            color: #A0A0A0;
+        .footer-col ul li a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s;
-            cursor: pointer;
+            transition: var(--transition);
         }
 
-        footer a:hover {
-            color: white;
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
         }
 
         .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
             border-top: 1px solid #333;
-            padding-top: 2rem;
-            text-align: center;
-            color: #A0A0A0;
+            font-size: 0.9rem;
+            color: #888;
         }
 
-        .text-center {
-            text-align: center;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .about-image img {
+                box-shadow: 10px 10px 0 var(--accent-color);
             }
         }
 
-        .community {
-            background: linear-gradient(135deg, #1B4D3E 0%, #0F3A4D 100%);
-            color: white;
-        }
-
-        .community .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (max-width: 768px) {
-            .community .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .community h2 {
-            color: white;
-            margin-bottom: 1.5rem;
-        }
-
-        .community p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .community img {
-            border-radius: 0.5rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            width: 100%;
+        /* Success Message Animation */
+        #successMessage {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+
+    <!-- Header -->
+    <header>
         <div class="container">
-            <div class="nav-brand">
-                <span>🌱</span>
-                <span>Agro Forte</span>
-            </div>
-            <div class="nav-links">
-                <a onclick="scrollToSection('sobre')">Sobre</a>
-                <a onclick="scrollToSection('inovacao')">Inovação</a>
-                <a onclick="scrollToSection('sustentabilidade')">Sustentabilidade</a>
-                <a onclick="scrollToSection('futuro')">Futuro</a>
-                <a onclick="scrollToSection('avaliacoes')">Avaliações</a>
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-seedling"></i> Agro Forte
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#inovacao">Inovação</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato" class="btn-nav">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Liderando a Revolução do Agronegócio Sustentável</h1>
+            <p>Combinamos tecnologia de precisão com práticas regenerativas para garantir a máxima produtividade da sua terra hoje e amanhã.</p>
+            <div class="btn-group">
+                <a href="#contato" class="btn btn-primary">Comece Agora <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Stats -->
+    <div class="stats">
         <div class="container">
-            <div class="hero-content">
-                <h1>Agro Forte, <span class="highlight">Futuro Sustentável</span></h1>
-                <p>Transformando a agricultura com tecnologia de ponta e práticas sustentáveis. Construindo um futuro onde a produtividade e a preservação ambiental caminham juntas.</p>
-                <div class="btn-group">
-                    <button class="btn btn-primary" onclick="scrollToSection('sobre')">Saiba Mais →</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('inovacao')">Conheça Nossas Soluções</button>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>40%</h3>
+                    <p>Economia de Água</p>
+                </div>
+                <div class="stat-item">
+                    <h3>35%</h3>
+                    <p>Aumento de Safra</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50%</h3>
+                    <p>Menos Custos</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Rastreabilidade</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section id="sobre">
+        <div class="container">
+            <div class="about-flex">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Agricultura Moderna">
+                </div>
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Nossa Missão</h2>
+                    </div>
+                    <p>Na <strong>Agro Forte</strong>, acreditamos que a tecnologia e a natureza podem e devem trabalhar juntas. Somos pioneiros em soluções que permitem ao produtor rural monitorar cada centímetro de sua propriedade em tempo real.</p>
+                    <p style="margin-top: 15px;">Através de inteligência artificial e análise de dados avançada, transformamos desafios climáticos e operacionais em oportunidades de crescimento sustentável.</p>
+                    <ul style="list-style: none; margin-top: 20px;">
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Consultoria Especializada</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Monitoramento Via Satélite</li>
+                        <li><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Suporte Técnico 24/7</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="sobre">
+    <!-- Innovation -->
+    <section id="inovacao" style="background-color: #f9f9f9;">
         <div class="container">
-            <div>
-                <h2>O Que é Agro Forte?</h2>
-                <p>Agro Forte é um movimento transformador que une a força da agricultura tradicional com as inovações tecnológicas mais avançadas. Representa a evolução do agronegócio brasileiro, onde produtividade, rentabilidade e responsabilidade ambiental convergem para criar um modelo de desenvolvimento verdadeiramente sustentável.</p>
-                <p>Nossa visão é empoderar agricultores e empresas do setor com ferramentas, conhecimento e práticas que permitam aumentar a produção enquanto preservam os recursos naturais para as gerações futuras. Cada decisão no campo hoje determina a saúde do planeta amanhã.</p>
-                <div class="feature-list">
-                    <div class="feature-item">
-                        <span class="feature-icon">🌿</span>
-                        <div>
-                            <h4>Sustentável</h4>
-                            <p style="font-size: 0.9rem; color: #757575; margin: 0;">Preservação ambiental</p>
-                        </div>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
-                        <div>
-                            <h4>Inovador</h4>
-                            <p style="font-size: 0.9rem; color: #757575; margin: 0;">Tecnologia de ponta</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-title">
+                <h2>Inovação em Campo</h2>
+                <p>Tecnologias que definem o futuro da produção agrícola.</p>
             </div>
-            <div>
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/technology-agro-fExEkTDqfQnsCbqwezAAtN.webp" alt="Tecnologia Agrícola">
-            </div>
-        </div>
-    </section>
-
-    <!-- Divider -->
-    <div class="section-divider"></div>
-
-    <!-- Innovation Section -->
-    <section class="innovation" id="inovacao">
-        <div class="container">
-            <div class="text-center">
-                <h2>Inovação Tecnológica</h2>
-                <p>A tecnologia é o alicerce do agronegócio moderno. Conheça as inovações que estão revolucionando o setor.</p>
-            </div>
-
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">⚡</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-drone"></i>
                     <h3>Agricultura de Precisão</h3>
-                    <p>Utilizando drones, sensores IoT e inteligência artificial, os agricultores podem monitorar cada metro quadrado de suas plantações em tempo real. Essa precisão permite otimizar o uso de água, fertilizantes e pesticidas, reduzindo custos e impacto ambiental.</p>
+                    <p>Mapeamento detalhado e aplicação variável de insumos para máxima eficiência.</p>
                 </div>
-
-                <div class="card">
-                    <div class="card-icon">💧</div>
-                    <h3>Gestão Inteligente de Água</h3>
-                    <p>Sistemas de irrigação automatizados e inteligentes garantem que cada planta receba exatamente a quantidade de água necessária. Sensores de umidade do solo e previsão de chuvas permitem economizar até 40% de água mantendo a produtividade.</p>
+                <div class="feature-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Gestão de Água</h3>
+                    <p>Sistemas de irrigação inteligente que economizam recursos vitais.</p>
                 </div>
-
-                <div class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Análise de Dados Avançada</h3>
-                    <p>Big data e machine learning transformam informações agrícolas em insights acionáveis. Previsões de safra, detecção de pragas e recomendações de plantio baseadas em dados históricos e condições climáticas aumentam a rentabilidade.</p>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Análise de Dados</h3>
+                    <p>Dashboards intuitivos para tomada de decisão baseada em fatos reais.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sustainability Section -->
-    <section class="sustainability" id="sustentabilidade">
+    <!-- FAQ -->
+    <section id="faq">
         <div class="container">
-            <div>
-                <h2>Sustentabilidade no Coração</h2>
-                <p>A sustentabilidade não é uma meta futura — é a realidade do agronegócio moderno. Práticas como rotação de culturas, conservação do solo, proteção da biodiversidade e redução de emissões de carbono são fundamentais para garantir a viabilidade econômica e ambiental das operações agrícolas.</p>
-                <p>Cada hectare cultivado com responsabilidade contribui para a segurança alimentar global, a preservação de ecossistemas e o combate às mudanças climáticas. Essa é a verdadeira força do agronegócio sustentável.</p>
-                <div class="sustainability-list">
-                    <div class="sustainability-item">
-                        <span class="sustainability-item-icon">🛡️</span>
-                        <div>
-                            <h4>Solo Saudável</h4>
-                            <p style="font-size: 0.9rem; margin: 0;">Práticas de conservação que preservam a fertilidade</p>
-                        </div>
-                    </div>
-                    <div class="sustainability-item">
-                        <span class="sustainability-item-icon">🌿</span>
-                        <div>
-                            <h4>Biodiversidade</h4>
-                            <p style="font-size: 0.9rem; margin: 0;">Proteção de habitats naturais e espécies</p>
-                        </div>
-                    </div>
-                    <div class="sustainability-item">
-                        <span class="sustainability-item-icon">💧</span>
-                        <div>
-                            <h4>Água Limpa</h4>
-                            <p style="font-size: 0.9rem; margin: 0;">Gestão responsável dos recursos hídricos</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
             </div>
-            <div>
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/sustainability-agro-c49NxKDtqAncLvY49rMEXE.webp" alt="Sustentabilidade">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details style="padding: 15px; background: var(--white); margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <summary style="font-weight: 600; cursor: pointer;">Como funciona a agricultura de precisão?</summary>
+                    <p style="margin-top: 10px; color: #666;">Utilizamos drones, sensores e IA para monitorar a plantação em tempo real, otimizando o uso de fertilizantes e água onde é realmente necessário.</p>
+                </details>
+                <details style="padding: 15px; background: var(--white); margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <summary style="font-weight: 600; cursor: pointer;">Qual o tempo de retorno do investimento?</summary>
+                    <p style="margin-top: 10px; color: #666;">Nossos clientes geralmente alcançam o ROI entre 12 a 18 meses, devido à drástica redução de desperdícios e aumento da produtividade.</p>
+                </details>
+                <details style="padding: 15px; background: var(--white); margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                    <summary style="font-weight: 600; cursor: pointer;">Vocês oferecem suporte para pequenos produtores?</summary>
+                    <p style="margin-top: 10px; color: #666;">Sim! Temos planos escaláveis que se adaptam desde pequenas propriedades familiares até grandes latifúndios.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Future Section -->
-    <section class="future" id="futuro">
+    <!-- Contact Form -->
+    <section id="contato" class="contact-section">
         <div class="container">
-            <div class="text-center">
-                <h2>O Futuro do Agronegócio</h2>
-                <p>Tendências e oportunidades que moldarão o setor nos próximos anos.</p>
+            <div class="section-title">
+                <h2>Fale com um Especialista</h2>
+                <p>Descubra como podemos potencializar sua produção.</p>
             </div>
-
-            <div class="future-cards">
-                <div class="future-card">
-                    <h3>Economia Circular</h3>
-                    <p>O futuro da agricultura passa pela economia circular, onde resíduos de uma atividade se tornam insumos para outra. Biomassa, biofertilizantes e energia renovável gerada na fazenda criam um sistema autossustentável e mais rentável.</p>
-                    <ul>
-                        <li>Aproveitamento de resíduos agrícolas</li>
-                        <li>Produção de energia renovável</li>
-                        <li>Redução de dependência de insumos externos</li>
-                    </ul>
-                </div>
-
-                <div class="future-card">
-                    <h3>Conectividade e Dados</h3>
-                    <p>A transformação digital conecta fazendas, fornecedores, processadores e consumidores em uma rede integrada de informações. Rastreabilidade total, transparência na cadeia de suprimentos e certificações digitais ganham importância crescente.</p>
-                    <ul>
-                        <li>Blockchain para rastreabilidade</li>
-                        <li>Plataformas de comercialização digital</li>
-                        <li>Certificações de sustentabilidade</li>
-                    </ul>
-                </div>
-
-                <div class="future-card">
-                    <h3>Biotecnologia Avançada</h3>
-                    <p>Variedades de plantas desenvolvidas por biotecnologia e melhoramento genético promovem maior produtividade com menor uso de recursos. Culturas resilientes a mudanças climáticas garantem segurança alimentar futura.</p>
-                    <ul>
-                        <li>Sementes mais resistentes</li>
-                        <li>Maior eficiência nutricional</li>
-                        <li>Adaptação a climas extremos</li>
-                    </ul>
-                </div>
-
-                <div class="future-card">
-                    <h3>Comunidades e Conhecimento</h3>
-                    <p>O fortalecimento de comunidades agrícolas através de educação, capacitação e compartilhamento de conhecimento é essencial. Redes de cooperativas, associações e plataformas colaborativas amplificam o impacto positivo.</p>
-                    <ul>
-                        <li>Programas de capacitação contínua</li>
-                        <li>Redes de cooperação</li>
-                        <li>Transferência de tecnologia</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="text-center">
-                <h2>Histórias de Sucesso</h2>
-                <p>Veja como agricultores e empresas transformaram seus negócios com Agro Forte.</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"A implementação da agricultura de precisão aumentou minha produtividade em 35% e reduziu significativamente meus custos. Recomendo Agro Forte!"</p>
-                    <div class="testimonial-author">
-                        <h4>João Carlos Silva</h4>
-                        <p>Produtor de Grãos - Mato Grosso</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Com a gestão inteligente de água, economizei 40% no consumo hídrico mantendo a qualidade. É um investimento que se paga rapidamente."</p>
-                    <div class="testimonial-author">
-                        <h4>Maria Beatriz Costa</h4>
-                        <p>Produtora de Hortaliças - São Paulo</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"A análise de dados fornecida pela plataforma me ajudou a tomar decisões mais assertivas. Minha rentabilidade aumentou consideravelmente."</p>
-                    <div class="testimonial-author">
-                        <h4>Roberto Campos</h4>
-                        <p>Empresário Agrícola - Goiás</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <div class="container">
-            <div class="text-center">
-                <h2>Galeria de Inovações</h2>
-                <p>Conheça as práticas e tecnologias transformando o agronegócio</p>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/drone-agro-NNgVCmLTutrGEpJQdokj8L.webp" alt="Visão Aérea de Fazenda Sustentável">
-                    <div class="gallery-item-caption">
-                        <h4>Visão Aérea de Fazenda Sustentável</h4>
-                        <p>Tecnologia de drones para monitoramento</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/soil-analysis-TuC8ciBA8qz739BA9hSM3Z.webp" alt="Análise de Solo em Laboratório">
-                    <div class="gallery-item-caption">
-                        <h4>Análise de Solo em Laboratório</h4>
-                        <p>Testes científicos para otimizar produção</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/innovation-lab-HtcrtdxYcKpmxVahoF8VvS.webp" alt="Laboratório de Inovação Agrícola">
-                    <div class="gallery-item-caption">
-                        <h4>Laboratório de Inovação Agrícola</h4>
-                        <p>Pesquisa e desenvolvimento de soluções</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <div class="text-center">
-                <h2>Por Que Escolher Agro Forte?</h2>
-            </div>
-
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <div>
-                        <h3>Comprovado</h3>
-                        <p>Resultados validados por milhares de agricultores em todo o Brasil</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">📈</div>
-                    <div>
-                        <h3>Rentável</h3>
-                        <p>Aumento de produtividade e redução de custos operacionais garantidos</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🌍</div>
-                    <div>
-                        <h3>Sustentável</h3>
-                        <p>Práticas que preservam o meio ambiente e garantem futuro</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">💡</div>
-                    <div>
-                        <h3>Inovador</h3>
-                        <p>Tecnologia de ponta que evolui constantemente</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Section -->
-    <section class="community">
-        <div class="container">
-            <div>
-                <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663175874071/FgJJbHBM52euW4xd8ApC6r/community-agro-c2U5eLi9CJcsYfoQFJX3SG.webp" alt="Comunidade Agrícola">
-            </div>
-            <div>
-                <h2>Comunidade e Colaboração</h2>
-                <p>O agronegócio sustentável é construído sobre a base de comunidades fortes e colaborativas. Agricultores, pesquisadores, empresas de tecnologia e órgãos públicos trabalham juntos para criar soluções inovadoras e compartilhar melhores práticas.</p>
-                <p>Através de associações, cooperativas e plataformas digitais, conhecimento é compartilhado, recursos são otimizados e impacto é amplificado. Juntos, construímos um futuro onde a agricultura é forte, próspera e sustentável.</p>
-                <button class="btn btn-secondary" style="margin-top: 1rem;" onclick="scrollToSection('avaliacoes')">Junte-se ao Movimento →</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews" id="avaliacoes">
-        <div class="container">
-            <div class="text-center">
-                <h2>Avalie Agro Forte</h2>
-                <p>Sua opinião é importante para nós. Compartilhe sua experiência!</p>
-            </div>
-
-            <div class="rating-form">
-                <div class="success-message" id="successMessage">
-                    ✓ Avaliação enviada com sucesso! Obrigado pelo feedback.
-                </div>
-
-                <h3>Compartilhe Sua Avaliação</h3>
-                <form id="reviewForm" onsubmit="handleSubmit(event)">
+            <div class="form-container">
+                <div id="successMessage">✓ Mensagem enviada com sucesso! Entraremos em contato em breve.</div>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
                     <div class="form-group">
-                        <label for="name">Nome Completo *</label>
-                        <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required placeholder="Seu nome">
                     </div>
-
                     <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required placeholder="seu.email@example.com">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" required placeholder="exemplo@empresa.com">
                     </div>
-
                     <div class="form-group">
-                        <label>Avaliação do Site *</label>
-                        <div class="star-rating">
-                            <input type="radio" id="star5" name="rating" value="5" required>
-                            <label for="star5">★</label>
-                            <input type="radio" id="star4" name="rating" value="4">
-                            <label for="star4">★</label>
-                            <input type="radio" id="star3" name="rating" value="3">
-                            <label for="star3">★</label>
-                            <input type="radio" id="star2" name="rating" value="2">
-                            <label for="star2">★</label>
-                            <input type="radio" id="star1" name="rating" value="1">
-                            <label for="star1">★</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="comment">Seu Comentário *</label>
-                        <textarea id="comment" name="comment" required placeholder="Compartilhe sua experiência com Agro Forte..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="category">Categoria de Interesse</label>
-                        <select id="category" name="category">
-                            <option value="">Selecione uma categoria</option>
-                            <option value="agricultura-precisao">Agricultura de Precisão</option>
-                            <option value="gestao-agua">Gestão de Água</option>
-                            <option value="analise-dados">Análise de Dados</option>
-                            <option value="sustentabilidade">Sustentabilidade</option>
-                            <option value="outro">Outro</option>
+                        <label for="category">Interesse Principal</label>
+                        <select id="category">
+                            <option value="precisao">Agricultura de Precisão</option>
+                            <option value="agua">Gestão de Água</option>
+                            <option value="dados">Análise de Dados</option>
+                            <option value="outro">Outros</option>
                         </select>
                     </div>
-
-                    <button type="submit" class="submit-btn">Enviar Avaliação</button>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitação</button>
                 </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <div class="text-center">
-                <h2>Perguntas Frequentes</h2>
-                <p>Tire suas dúvidas sobre Agro Forte</p>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Como funciona a agricultura de precisão?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>A agricultura de precisão utiliza drones, sensores e IA para monitorar cada área da plantação em tempo real, otimizando recursos como água, fertilizantes e pesticidas. Isso resulta em maior produtividade com menor impacto ambiental.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Quanto posso economizar com a gestão inteligente de água?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Nossos clientes relatam economia de até 40% no consumo de água mantendo ou aumentando a produtividade. Os sistemas inteligentes garantem que cada planta receba exatamente a quantidade de água necessária.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Qual é o tempo de retorno do investimento?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Geralmente, o ROI ocorre entre 12 a 18 meses, dependendo do tamanho da propriedade e tecnologias implementadas. A redução de custos e aumento de produtividade garantem um retorno rápido.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>Agro Forte oferece suporte técnico?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Oferecemos suporte 24/7, treinamento de equipe e acompanhamento contínuo. Nosso time de especialistas está sempre disponível para ajudar no sucesso da sua operação.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stat-item">
-                <div class="stat-number">40%</div>
-                <div class="stat-label">Economia de água com irrigação inteligente</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">35%</div>
-                <div class="stat-label">Aumento de produtividade com tecnologia</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50%</div>
-                <div class="stat-label">Redução de custos operacionais</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Rastreabilidade da produção</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Pronto para Transformar Seu Agronegócio?</h2>
-            <p>Junte-se a milhares de agricultores e empresas que já estão colhendo os benefícios da agricultura sustentável e tecnológica.</p>
-            <div class="btn-group">
-                <button class="btn btn-secondary" onclick="scrollToSection('avaliacoes')">Solicitar Demonstração →</button>
-                <button class="btn" style="background-color: white; color: #1B4D3E;">Baixar Guia Completo</button>
             </div>
         </div>
     </section>
@@ -1425,88 +526,60 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div>
-                <h4 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                    <span>🌱</span>
-                    <span>Agro Forte</span>
-                </h4>
-                <p>Transformando a agricultura para um futuro sustentável.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 20px;">
+                        <i class="fas fa-seedling"></i> Agro Forte
+                    </a>
+                    <p style="color: #888;">Transformando a agricultura com tecnologia e sustentabilidade para as próximas gerações.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#inovacao">Inovação</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 4004-0000</li>
+                        <li><i class="fas fa-envelope"></i> contato@agroforte.com.br</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ribeirão Preto, SP</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <div style="display: flex; gap: 15px; font-size: 1.5rem;">
+                        <a href="#" style="color: white;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white;"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h4>Soluções</h4>
-                <ul>
-                    <li><a onclick="scrollToSection('inovacao')">Agricultura de Precisão</a></li>
-                    <li><a onclick="scrollToSection('inovacao')">Gestão de Água</a></li>
-                    <li><a onclick="scrollToSection('inovacao')">Análise de Dados</a></li>
-                </ul>
+            <div class="footer-bottom">
+                &copy; 2026 Agro Forte. Todos os direitos reservados.
             </div>
-            <div>
-                <h4>Empresa</h4>
-                <ul>
-                    <li><a onclick="scrollToSection('sobre')">Sobre Nós</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacidade</a></li>
-                    <li><a href="#">Termos</a></li>
-                    <li><a href="#">Cookies</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Agro Forte. Todos os direitos reservados. Construindo um futuro sustentável juntos.</p>
         </div>
     </footer>
 
     <script>
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
         function handleSubmit(event) {
             event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const rating = document.querySelector('input[name="rating"]:checked').value;
-            const comment = document.getElementById('comment').value;
-            const category = document.getElementById('category').value;
-            
-            // Mostrar mensagem de sucesso
-            const successMessage = document.getElementById('successMessage');
-            successMessage.classList.add('show');
-            
-            // Limpar formulário
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
             event.target.reset();
             
-            // Esconder mensagem após 3 segundos
             setTimeout(() => {
-                successMessage.classList.remove('show');
-            }, 3000);
-        }
-
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
+                successMsg.style.display = 'none';
+            }, 5000);
             
-            // Fechar todos os outros FAQs
-            document.querySelectorAll('.faq-answer').forEach(item => {
-                if (item !== answer) {
-                    item.classList.remove('open');
-                    item.previousElementSibling.querySelector('.faq-toggle').classList.remove('open');
-                }
+            window.scrollTo({
+                top: successMsg.offsetTop - 150,
+                behavior: 'smooth'
             });
-            
-            // Alternar o FAQ atual
-            answer.classList.toggle('open');
-            toggle.classList.toggle('open');
         }
     </script>
 </body>
